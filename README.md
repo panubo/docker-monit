@@ -13,10 +13,11 @@ Docker optimised [Monit](https://mmonit.com/) container.
 
 ## Usage Example
 
+Mount the host filesystems to /host and they will be added to the configuration automatically.
+
 ```
 docker run --rm --hostname myhost \
   -v /:/host/:ro \
   -v /dev:/host/dev \
   quay.io/panubo/monit
 ```
-
