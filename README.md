@@ -11,9 +11,12 @@ Docker optimised [Monit](https://mmonit.com/) container.
 - `PASSWORD` - auth password (required)
 - `ALERT_EMAIL` - alert email address
 
-## Usage Example
+## Special features
 
-Mount the host filesystems to /host and they will be added to the configuration automatically.
+- Mount the host filesystems to /host and they will be added to the configuration automatically.
+- Mount `/etc/monit/results` to the host and place the exit code of services to have them monitored. eg `example.service.result`
+
+## Usage Example
 
 ```
 docker run --rm --hostname myhost \
