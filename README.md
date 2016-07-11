@@ -15,11 +15,14 @@ Docker optimised [Monit](https://mmonit.com/) container.
 
 - Mount the host filesystems to /host and they will be added to the configuration automatically.
 - Mount `/etc/monit/results` to the host and place the exit code of services to have them monitored. eg `example.service.result`
+- Custom scripts in `checks` which will automatically be added and run.
 
 ## Usage Example
 
 ```
 docker run --rm --hostname myhost \
+  --security-opt label:disable \
+  --privileged \
   -v /:/host/:ro \
   -v /dev:/host/dev \
   quay.io/panubo/monit

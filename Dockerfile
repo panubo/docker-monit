@@ -1,12 +1,14 @@
 FROM alpine:latest
 
 COPY monit /etc/monit
+COPY checks /etc/monit/checks
 COPY entry.sh /
 
 RUN apk add -U monit bash util-linux && \
     rm -rf /var/cache/apk/* && \
     mkdir -p /var/lib/monit/events && \
     chmod 700 /etc/monit/monitrc && \
+    chmod +x /etc/monit/checks/* && \
     # Cache config
     cp -a /etc/monit/conf.d /etc/monit/conf.d.cache
 
