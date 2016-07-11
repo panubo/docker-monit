@@ -4,7 +4,7 @@ COPY monit /etc/monit
 COPY checks /etc/monit/checks
 COPY entry.sh /
 
-RUN apk add -U monit bash util-linux && \
+RUN apk add -U monit bash util-linux lvm2 && \
     rm -rf /var/cache/apk/* && \
     mkdir -p /var/lib/monit/events && \
     chmod 700 /etc/monit/monitrc && \
