@@ -1,8 +1,6 @@
-# Monit Docker Container
+# Monit Docker Image
 
-[![Docker Repository on Quay.io](https://quay.io/repository/panubo/monit/status "Docker Repository on Quay.io")](https://quay.io/repository/panubo/monit)
-
-Docker optimised [Monit](https://mmonit.com/) container.
+Docker optimised [Monit](https://mmonit.com/) image.
 
 ## Environment config
 
